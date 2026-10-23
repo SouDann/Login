@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+<body>
+
+  <header>
+    <h1>Login</h1>
+  </header>
+
+  <main>
+    <!-- Div Campos -->
+    <div id="campos">
+  <h2>Bem-vindo</h2>
+
+  <form action="#" method="post">
+    <!-- Nova div: e-mail + senha -->
+  <div id="credenciais">
+
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="senha">Senha</label>
+  <input
+    type="password"
+    id="senha"
+    name="senha"
+    required
+    minlength="8"
+    pattern="(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+  >
+
+  <!-- Instruções da senha -->
+  <div id="instrucoes-senha">
+  <ul>
+    <li>Mín. 8 caracteres</li>
+    <li>1 ou + caracteres especiais</li>
+    <li>1 ou + números</li>
+  </ul>
+</div>
+</div>
+
+    <!-- Espaço reservado para o captcha -->
+    <div id="captcha">
+      <input type="checkbox" id="nao-robo" required>
+      <label for="nao-robo">Não sou um robô</label>
+    </div>
+
+    <button type="submit">Logar</button>
+  </form>
+</div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

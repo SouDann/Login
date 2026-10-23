@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  background-color: #0a1f44;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(79, 195, 247, 0.85) 0%,
+    rgba(79, 195, 247, 0.55) 15%,
+    rgba(79, 195, 247, 0.3) 30%,
+    rgba(79, 195, 247, 0.12) 45%,
+    rgba(79, 195, 247, 0.04) 58%,
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  text-align: center;
+  color: #dfe6ef;
+  margin-bottom: 14px; /* era 48px, 30% mais perto */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px; /* tamanho fixo para servir de referência */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 0 24px 24px;
+}
+
+/* Div Campos */
+#campos {
+  width: 100%;
+  max-width: 360px;
+  padding: 32px;
+  border: none; /* borda cinza removida */
+  border-radius: 16px;
+  color: #2f6db5;
+  background: #f5f9ff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Título Bem-vindo */
+#campos h2 {
+  margin: 0 0 20%;
+  text-align: center;
+  color: #9ca3af; /* cinza */
+  font-size: 25.6px; /* 20% menor que o Login (32px) */
+}
+
+#campos form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* era 12px */
+}
+
+/* dá um respiro só antes do "Senha", sem afastar o label do campo */
+#campos label[for="senha"] {
+  margin-top: 8px;
+}
+
+#campos input,
+#campos button {
+  font-family: inherit;
+  font-weight: 700;
+}
+
+#campos input[type="email"],
+#campos input[type="password"] {
+  padding: 10px;
+  border: 1px solid #2f6db5;
+  border-radius: 8px;
+  color: #2f6db5;
+}
+
+#campos button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0a1f44;
+  color: #dfe6ef;
+  cursor: pointer;
+}
+
+#campos button:hover {
+  background-color: #12306b;
+}
+
+/* Div Suporte */
+#suporte {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+#suporte a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+#suporte a:hover {
+  text-decoration: underline;
+}
+
+/* Nova div: e-mail + senha */
+#credenciais {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 24px; /* espaço entre a div e o que vem abaixo */
+}
+
+/* mais espaço entre o captcha e o botão */
+#campos button {
+  margin-top: 4px;
+}
+
+/* fixa o tamanho dos títulos E-mail e Senha como referência */
+#campos label {
+  font-size: 16px;
+}
+
+#instrucoes-senha {
+  display: flex;
+  flex-direction: column;
+  color: #9ca3af; /* cinza */
+  font-size: 9.6px;
+  font-weight: 700;
+}
+
+#instrucoes-senha ul {
+  margin: 0;
+  padding-left: 16px; /* espaço para as bolinhas dos tópicos */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
